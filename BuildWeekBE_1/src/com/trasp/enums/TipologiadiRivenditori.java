@@ -1,6 +1,6 @@
 package com.trasp.enums;
 
-public enum TipoRivenditore {
+public enum TipologiadiRivenditori {
 	EDICOLA,
 	TABACCHI,
 	SUPERMERCATO,

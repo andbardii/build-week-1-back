@@ -1,12 +1,20 @@
-package com.trasp.model;
+package com.trasp.model.titoli;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.ManyToOne;
+
 import com.trasp.enums.Durata;
 
+@Entity
 public class Abbonamento extends TitolodiViaggio {
 
+	@ManyToOne
 	private Tessera tessera;
+	@Enumerated(EnumType.STRING)
 	private Durata durata;
 	private LocalDate datadiScadenza;
 

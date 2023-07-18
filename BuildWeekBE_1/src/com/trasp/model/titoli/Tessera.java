@@ -1,11 +1,24 @@
-package com.trasp.model;
+package com.trasp.model.titoli;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="tessere")
 public class Tessera {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long numeroTessera;
+	@ManyToOne
 	private Utente utente;
+	@ManyToOne
 	private Abbonamento abbonamento;
 	private LocalDate datadiScadenza;
 
@@ -13,13 +26,6 @@ public class Tessera {
 		super();
 	}
 
-	public Tessera(Long numeroTessera, Utente utente, Abbonamento abbonamento, LocalDate datadiScadenza) {
-		super();
-		this.numeroTessera = numeroTessera;
-		this.utente = utente;
-		this.abbonamento = abbonamento;
-		this.datadiScadenza = datadiScadenza;
-	}
 
 	public Long getNumeroTessera() {
 		return numeroTessera;

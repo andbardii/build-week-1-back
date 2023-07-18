@@ -1,10 +1,17 @@
-package com.trasp.model;
+package com.trasp.model.titoli;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+
+import com.trasp.model.mezzi.Mezzo;
+
+@Entity
 public class Biglietto extends TitolodiViaggio {
 	
 	private LocalDate datadiValidazione;
+	@ManyToOne
 	private Mezzo luogodiValidazione;
 	
 	public Biglietto() {

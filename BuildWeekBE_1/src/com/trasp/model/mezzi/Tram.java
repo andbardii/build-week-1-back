@@ -1,9 +1,9 @@
-package com.trasp.model;
+package com.trasp.model.mezzi;
 
-import java.time.LocalDate;
-import java.util.List;
-import java.util.Map;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Tram extends Mezzo {
 
 	public Tram() {

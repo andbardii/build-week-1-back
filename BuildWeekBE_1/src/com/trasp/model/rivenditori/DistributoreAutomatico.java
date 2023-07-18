@@ -1,18 +1,21 @@
-package com.trasp.model;
+package com.trasp.model.rivenditori;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 
 import com.trasp.enums.StatodiServizio;
 
+@Entity
+@DiscriminatorValue("DistributoreAutomatico")
 public class DistributoreAutomatico extends Rivenditore {
 
+	@Enumerated(EnumType.STRING)
 	private StatodiServizio status;
 
 	public DistributoreAutomatico() {
 		super();
-	}
-
-	public DistributoreAutomatico(StatodiServizio status) {
-		super();
-		this.status = status;
 	}
 
 	public StatodiServizio getStatus() {
@@ -27,6 +30,5 @@ public class DistributoreAutomatico extends Rivenditore {
 	public String toString() {
 		return "DistributoreAutomatico" + super.toString() + "status=" + status + "]";
 	}
-	
-	
+
 }

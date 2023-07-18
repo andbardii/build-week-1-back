@@ -1,22 +1,29 @@
-package com.trasp.model;
+package com.trasp.model.titoli;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="utenti")
 public class Utente {
 
+	@Id
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
 	private String cognome;
-	private Tessera tessera;
 
 	public Utente() {
 		super();
 	}
 
-	public Utente(Long id, String nome, String cognome, Tessera tessera) {
+	public Utente(String nome, String cognome) {
 		super();
-		this.id = id;
 		this.nome = nome;
 		this.cognome = cognome;
-		this.tessera = tessera;
 	}
 
 	public String getNome() {
@@ -35,21 +42,13 @@ public class Utente {
 		this.cognome = cognome;
 	}
 
-	public Tessera getTessera() {
-		return tessera;
-	}
-
-	public void setTessera(Tessera tessera) {
-		this.tessera = tessera;
-	}
-
 	public Long getId() {
 		return id;
 	}
 
 	@Override
 	public String toString() {
-		return "Utente [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", tessera=" + tessera + "]";
+		return "Utente [id=" + id + ", nome=" + nome + ", cognome=" + cognome + "]";
 	}
 
 }

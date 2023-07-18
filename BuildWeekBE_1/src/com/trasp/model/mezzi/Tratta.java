@@ -1,12 +1,22 @@
-package com.trasp.model;
+package com.trasp.model.mezzi;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tratte")
 public class Tratta {
-	
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
 	private int tempoDiPercorrenza;
 	private String capolinea;
-	
+
 	public Tratta() {
 		super();
 	}
@@ -44,6 +54,5 @@ public class Tratta {
 		return "Tratta [id=" + id + ", nome=" + nome + ", tempoDiPercorrenza=" + tempoDiPercorrenza + ", capolinea="
 				+ capolinea + "]";
 	}
-	
 
 }

@@ -1,5 +1,5 @@
 package com.trasp.dao;
 
-public class UtenteDAO {
+public class MezzoDAO {
 
 }
