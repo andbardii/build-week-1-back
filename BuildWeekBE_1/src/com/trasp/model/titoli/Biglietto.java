@@ -4,15 +4,21 @@ import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 
 import com.trasp.model.mezzi.Mezzo;
 
 @Entity
+@NamedQuery(name = "findBigliettiByRivenditore", query = "SELECT b FROM Biglietto b WHERE b.luogodiAcquisto.id = :idRivenditore")
+@NamedQuery(name = "findBigliettiByDate", query = "SELECT b FROM Biglietto b WHERE b.datadiEmissione >= :inizio AND b.datadiEmissione <= :fine")
+@NamedQuery(name = "printAllBiglietti", query = "SELECT b FROM Biglietto b")
 public class Biglietto extends TitolodiViaggio {
 	
 	private LocalDate datadiValidazione;
 	@ManyToOne
 	private Mezzo luogodiValidazione;
+	
+	private boolean valid = true;
 	
 	public Biglietto() {
 		super();
@@ -34,11 +40,19 @@ public class Biglietto extends TitolodiViaggio {
 		this.luogodiValidazione = luogodiValidazione;
 	}
 
+	public boolean isValid() {
+		return valid;
+	}
+
+	public void setValid(boolean valid) {
+		this.valid = valid;
+	}
+
 	@Override
 	public String toString() {
-		return "Biglietto" + super.toString() +" datadiValidazione=" + datadiValidazione + ", luogodiValidazione=" + luogodiValidazione + "]";
+		return "Biglietto" + super.toString() + "datadiValidazione=" + datadiValidazione + ", luogodiValidazione=" + luogodiValidazione
+				+ ", valid=" + valid + "]";
 	}
-	
 	
 
 }

@@ -18,25 +18,17 @@ public abstract class TitolodiViaggio {
 	@SequenceGenerator(name = "titolodiViaggio_seq", sequenceName = "titolodiViaggio_seq", allocationSize = 1)
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="titolodiViaggio_seq")
 	private Long id;
-	private boolean valido = true;
-	private LocalDate datadiEmissione = LocalDate.now();
+	private LocalDate datadiEmissione;
 	@ManyToOne
 	private Rivenditore luogodiAcquisto;
 
 	public TitolodiViaggio() {
 		super();
+		setDatadiEmissione(LocalDate.now());
 	}
 
 	public Long getId() {
 		return id;
-	}
-
-	public boolean isValido() {
-		return valido;
-	}
-
-	public void setValido(boolean valido) {
-		this.valido = valido;
 	}
 
 	public LocalDate getDatadiEmissione() {
@@ -55,4 +47,11 @@ public abstract class TitolodiViaggio {
 		this.luogodiAcquisto = luogodiAcquisto;
 	}
 
+	@Override
+	public String toString() {
+		return "TitolodiViaggio [id=" + id + ", datadiEmissione=" + datadiEmissione + ", luogodiAcquisto="
+				+ luogodiAcquisto + "]";
+	}
+
+	
 }

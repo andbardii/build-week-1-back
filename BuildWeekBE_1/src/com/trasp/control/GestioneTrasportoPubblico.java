@@ -1,26 +1,37 @@
 package com.trasp.control;
 
-import com.trasp.dao.RivenditoreDAO;
 import com.trasp.dao.TitoloDAO;
-import com.trasp.enums.Durata;
-import com.trasp.enums.TipologiadiRivenditori;
-import com.trasp.model.rivenditori.DistributoreAutomatico;
-import com.trasp.model.rivenditori.RivenditoreAutorizzato;
 
 public class GestioneTrasportoPubblico {
 
+//		### READ ME ###
+//		( GestioneTest ) PERMETTE DI GENERARE DIVERSI DATI PER TESTARE IL PROGRAMMA
+//		( ClassiDAO ) ESISTE UNA CLASSE DAO DEFINITA PER QUASI OGNI CLASSE: 
+//		[ UTENTE, TITOLO, TESSERA, RIVENDITORE, MEZZO ]
+	
 	public static void main(String[] args) {
 
-//		GENERA CONTENUTI NEL DATABASE
-		
+//		### GENERA 2 RIVENDITORI AUTORIZZATI E 1 DISTRIBUTORE AUTOMATICO ###
 //		GestioneTest.generaRivenditori();
+		
+//		### GENERA 8 BIGLIETTI DAI 3 RIVENDITORI ###
 //		GestioneTest.emettiBiglietti();
+		
+//		### CHIEDE NOME E COGNOME PER GENERARE 3 TESSERE ###
 //		GestioneTest.emettiTessere();
 		
-//		TitoloDAO.caricaAbbonamento(1, 2, Durata.MENSILE);
-		TitoloDAO.deleteAbbonamento(10);
+//		### CARICA 1 ABBONAMENTO MENSILE E 2 SETTIMANALI NELLE TESSERE ###
+//		GestioneTest.caricaAbbonamenti();
+		
+//		### PARTE PRIMA ###
+//		TitoloDAO.rinnovaAbbonamento(long NUMEROTESSERA)
+//		TesseraDAO.rinnovaTessera(long NUMEROTESSERA);
+//		TitoloDAO.findTitoliByRivenditore(1);
+//		TitoloDAO.findTitoliByDate(LocalDate.of(2022, 7, 17), LocalDate.of(2022, 7, 19));
+//		TitoloDAO.printAllTitoli();
+		
+//		### PARTE SECONDA ###
 		
 	}
-	
 	
 }
