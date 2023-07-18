@@ -12,7 +12,7 @@ import com.trasp.enums.StatodiServizio;
 public class DistributoreAutomatico extends Rivenditore {
 
 	@Enumerated(EnumType.STRING)
-	private StatodiServizio status;
+	private StatodiServizio status = StatodiServizio.ATTIVO;
 
 	public DistributoreAutomatico() {
 		super();

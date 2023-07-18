@@ -2,19 +2,25 @@ package com.trasp.control;
 
 import com.trasp.dao.RivenditoreDAO;
 import com.trasp.dao.TitoloDAO;
+import com.trasp.enums.Durata;
 import com.trasp.enums.TipologiadiRivenditori;
+import com.trasp.model.rivenditori.DistributoreAutomatico;
 import com.trasp.model.rivenditori.RivenditoreAutorizzato;
 
 public class GestioneTrasportoPubblico {
 
 	public static void main(String[] args) {
 
-		RivenditoreAutorizzato ra1 = new RivenditoreAutorizzato();
-//		ra1.setNome("Da Mario");
-//		ra1.setTipoRivenditore(TipologiadiRivenditori.EDICOLA);
-//		RivenditoreDAO.saveRivenditore(ra1);
+//		GENERA CONTENUTI NEL DATABASE
 		
-		TitoloDAO.emissioneBiglietto(1);
+//		GestioneTest.generaRivenditori();
+//		GestioneTest.emettiBiglietti();
+//		GestioneTest.emettiTessere();
+		
+//		TitoloDAO.caricaAbbonamento(1, 2, Durata.MENSILE);
+		TitoloDAO.deleteAbbonamento(10);
+		
 	}
-
+	
+	
 }

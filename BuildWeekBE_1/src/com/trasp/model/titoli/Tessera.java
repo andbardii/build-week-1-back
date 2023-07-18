@@ -20,7 +20,7 @@ public class Tessera {
 	private Utente utente;
 	@ManyToOne
 	private Abbonamento abbonamento;
-	private LocalDate datadiScadenza;
+	private LocalDate datadiScadenza = LocalDate.now().plusYears(1);
 
 	public Tessera() {
 		super();

@@ -5,8 +5,8 @@ import java.time.LocalDate;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
-import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 
 import com.trasp.model.rivenditori.Rivenditore;
@@ -20,7 +20,7 @@ public abstract class TitolodiViaggio {
 	private Long id;
 	private boolean valido = true;
 	private LocalDate datadiEmissione = LocalDate.now();
-	@OneToOne
+	@ManyToOne
 	private Rivenditore luogodiAcquisto;
 
 	public TitolodiViaggio() {

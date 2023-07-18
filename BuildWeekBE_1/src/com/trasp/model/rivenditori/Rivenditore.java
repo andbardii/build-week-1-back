@@ -38,4 +38,10 @@ public class Rivenditore {
 		return id;
 	}
 
+
+	@Override
+	public String toString() {
+		return "Rivenditore [id=" + id + ", nome=" + nome + "]";
+	}
+
 }
