@@ -22,6 +22,10 @@ public class Manutenzione {
 		super();
 	}
 
+	public Long getId() {
+		return id;
+	}
+
 	public LocalDate getInizioManutenzione() {
 		return inizioManutenzione;
 	}

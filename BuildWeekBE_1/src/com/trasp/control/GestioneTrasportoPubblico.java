@@ -1,5 +1,6 @@
 package com.trasp.control;
 
+import com.trasp.dao.MezzoDAO;
 import com.trasp.dao.TitoloDAO;
 
 public class GestioneTrasportoPubblico {
@@ -23,14 +24,21 @@ public class GestioneTrasportoPubblico {
 //		### CARICA 1 ABBONAMENTO MENSILE E 2 SETTIMANALI NELLE TESSERE ###
 //		GestioneTest.caricaAbbonamenti();
 		
-//		### PARTE PRIMA ###
+//		### GESTIONE TITOLI E UTENTI ###
+//		TitoloDAO.checkAbbonamento(long NUMEROTESSERA)
 //		TitoloDAO.rinnovaAbbonamento(long NUMEROTESSERA)
+//		TitoloDAO.checkTessera(long NUMEROTESSERA)
 //		TesseraDAO.rinnovaTessera(long NUMEROTESSERA);
+		
 //		TitoloDAO.findTitoliByRivenditore(1);
 //		TitoloDAO.findTitoliByDate(LocalDate.of(2022, 7, 17), LocalDate.of(2022, 7, 19));
 //		TitoloDAO.printAllTitoli();
 		
-//		### PARTE SECONDA ###
+//		### GESTIONE PARCO MEZZI ###
+//		GestioneTest.caricaMezzi();
+//		MezzoDAO.entrainManutenzione(1);
+//		MezzoDAO.entrainServizio(1);
+
 		
 	}
 	

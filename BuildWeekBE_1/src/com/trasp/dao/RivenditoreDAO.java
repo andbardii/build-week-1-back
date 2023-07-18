@@ -37,7 +37,7 @@ public class RivenditoreDAO {
 			em.getTransaction().begin();
 			Rivenditore r = em.find(Rivenditore.class, id);
 			em.getTransaction().commit();
-			log.info("Rivenditore aggiunto!!!");
+			log.info("Rivenditore: " + r.toString());
 			return r;
 		} catch (Exception ex) {
 			em.getTransaction().rollback();

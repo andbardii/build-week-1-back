@@ -38,6 +38,7 @@ public class Mezzo {
 
 	public Mezzo() {
 		super();
+		setStatomezzo(StatodeiMezzi.INSERVIZIO);
 	}
 
 	public int getCapienza() {
