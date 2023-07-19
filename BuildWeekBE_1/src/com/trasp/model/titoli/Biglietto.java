@@ -12,6 +12,8 @@ import com.trasp.model.mezzi.Mezzo;
 @NamedQuery(name = "findBigliettiByRivenditore", query = "SELECT b FROM Biglietto b WHERE b.luogodiAcquisto.id = :idRivenditore")
 @NamedQuery(name = "findBigliettiByDate", query = "SELECT b FROM Biglietto b WHERE b.datadiEmissione >= :inizio AND b.datadiEmissione <= :fine")
 @NamedQuery(name = "printAllBiglietti", query = "SELECT b FROM Biglietto b")
+@NamedQuery(name = "findBigliettiByMezzo", query = "SELECT b FROM Biglietto b WHERE b.luogodiValidazione.id = :idMezzo")
+@NamedQuery(name = "findBigliettiByValidationDate", query = "SELECT b FROM Biglietto b WHERE b.datadiValidazione >= :inizio AND b.datadiValidazione <= :fine")
 public class Biglietto extends TitolodiViaggio {
 	
 	private LocalDate datadiValidazione;

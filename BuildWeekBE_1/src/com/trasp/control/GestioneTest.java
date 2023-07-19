@@ -1,6 +1,7 @@
 package com.trasp.control;
 
 import com.trasp.dao.TitoloDAO;
+import com.trasp.dao.TrattaDAO;
 import com.trasp.dao.MezzoDAO;
 import com.trasp.dao.RivenditoreDAO;
 import com.trasp.dao.TesseraDAO;
@@ -8,6 +9,7 @@ import com.trasp.enums.Durata;
 import com.trasp.enums.TipologiadiRivenditori;
 import com.trasp.model.mezzi.Autobus;
 import com.trasp.model.mezzi.Tram;
+import com.trasp.model.mezzi.Tratta;
 import com.trasp.model.rivenditori.DistributoreAutomatico;
 import com.trasp.model.rivenditori.RivenditoreAutorizzato;
 
@@ -90,6 +92,38 @@ public class GestioneTest {
 		MezzoDAO.saveMezzo(t2);
 		Tram t3 = new Tram();
 		MezzoDAO.saveMezzo(t3);
+		
+	}
+	
+	public static void caricaTratte() {
+		
+		Tratta t1 = new Tratta();
+		t1.setNome("Stazione - Ospedale");
+		t1.setCapolinea("Ospedale Malpighi");
+		t1.setZonaDiPartenza("Stazione Centrale");
+		t1.setTempoMedio(00.27);
+		TrattaDAO.saveTratta(t1);
+		
+		Tratta t2 = new Tratta();
+		t2.setNome("Stazione - Stadio");
+		t2.setCapolinea("San Siro");
+		t2.setZonaDiPartenza("Stazione Centrale");
+		t2.setTempoMedio(00.40);
+		TrattaDAO.saveTratta(t2);
+		
+		Tratta t3 = new Tratta();
+		t3.setNome("Polisportiva - Stazione");
+		t3.setCapolinea("Stazione Centrale");
+		t3.setZonaDiPartenza("Polisportiva Alemanni");
+		t3.setTempoMedio(1.10);
+		TrattaDAO.saveTratta(t3);
+		
+		Tratta t4 = new Tratta();
+		t4.setNome("Stazione - Aereoporto");
+		t4.setCapolinea("Aereoporto Linate");
+		t4.setZonaDiPartenza("Stazione Centrale");
+		t4.setTempoMedio(1.20);
+		TrattaDAO.saveTratta(t4);
 		
 	}
 }

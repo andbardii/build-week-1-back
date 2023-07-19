@@ -14,8 +14,9 @@ public class Tratta {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
-	private int tempoDiPercorrenza;
+	private double tempoMedio;
 	private String capolinea;
+	private String zonaDiPartenza;
 
 	public Tratta() {
 		super();
@@ -29,12 +30,12 @@ public class Tratta {
 		this.nome = nome;
 	}
 
-	public int getTempoDiPercorrenza() {
-		return tempoDiPercorrenza;
+	public double getTempoMedio() {
+		return tempoMedio;
 	}
 
-	public void setTempoDiPercorrenza(int tempoDiPercorrenza) {
-		this.tempoDiPercorrenza = tempoDiPercorrenza;
+	public void setTempoMedio(double tempoMedio) {
+		this.tempoMedio = tempoMedio;
 	}
 
 	public String getCapolinea() {
@@ -49,10 +50,18 @@ public class Tratta {
 		return id;
 	}
 
+	public String getZonaDiPartenza() {
+		return zonaDiPartenza;
+	}
+
+	public void setZonaDiPartenza(String zonaDiPartenza) {
+		this.zonaDiPartenza = zonaDiPartenza;
+	}
+	
 	@Override
 	public String toString() {
-		return "Tratta [id=" + id + ", nome=" + nome + ", tempoDiPercorrenza=" + tempoDiPercorrenza + ", capolinea="
-				+ capolinea + "]";
+		return "Tratta [id=" + id + ", nome=" + nome + ", tempoMedio=" + tempoMedio + ", capolinea=" + capolinea
+				+ ", zonaDiPartenza=" + zonaDiPartenza + "]";
 	}
 
 }

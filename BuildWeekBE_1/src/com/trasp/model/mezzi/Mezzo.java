@@ -32,7 +32,7 @@ public class Mezzo {
 	@ManyToMany
 	private List<Manutenzione> periodoDiManutenzione;
 	@ManyToMany
-	private List<Tratta> tratta;
+	private List<TrattaAssegnata> tratta;
 	@Enumerated(EnumType.STRING)
 	private StatodeiMezzi statomezzo;
 
@@ -57,11 +57,11 @@ public class Mezzo {
 		this.periodoDiManutenzione = periodoDiManutenzione;
 	}
 
-	public List<Tratta> getTratta() {
+	public List<TrattaAssegnata> getTratta() {
 		return tratta;
 	}
 
-	public void setTratta(List<Tratta> tratta) {
+	public void setTratta(List<TrattaAssegnata> tratta) {
 		this.tratta = tratta;
 	}
 

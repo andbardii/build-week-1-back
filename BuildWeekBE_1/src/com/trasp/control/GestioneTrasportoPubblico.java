@@ -1,7 +1,10 @@
 package com.trasp.control;
 
+import java.time.LocalDate;
+
 import com.trasp.dao.MezzoDAO;
 import com.trasp.dao.TitoloDAO;
+import com.trasp.dao.TrattaDAO;
 
 public class GestioneTrasportoPubblico {
 
@@ -36,9 +39,20 @@ public class GestioneTrasportoPubblico {
 		
 //		### GESTIONE PARCO MEZZI ###
 //		GestioneTest.caricaMezzi();
-//		MezzoDAO.entrainManutenzione(1);
-//		MezzoDAO.entrainServizio(1);
-
+//		GestioneTest.caricaTratte();
+		
+//		MezzoDAO.entrainManutenzione(2);
+//		MezzoDAO.entrainServizio(2);
+		
+//		MezzoDAO.vidimaBiglietto(4, 2);
+//		MezzoDAO.findBigliettiByMezzo(2);
+//		MezzoDAO.findBigliettiByValidationDate(LocalDate.of(2023, 7, 18), LocalDate.of(2023, 7, 19));
+//		MezzoDAO.checkStatoMezzo(1);
+//		MezzoDAO.findManutenzioni(2);
+	
+//		TrattaDAO.assegnaTratta(1, 3);
+//		TrattaDAO.assegnaTratta(7, 1);
+//		TrattaDAO.checkTratteAssegnate(2);
 		
 	}
 	

@@ -10,6 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "manutenzioni")
+
 public class Manutenzione {
 
 	@Id
