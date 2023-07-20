@@ -14,49 +14,52 @@ public class GestioneTrasportoPubblico {
 //		[ UTENTE, TITOLO, TESSERA, RIVENDITORE, MEZZO ]
 	
 	public static void main(String[] args) {
+		
+//		##### GESTIONE TITOLI E UTENTI #####
 
-//		### GENERA 2 RIVENDITORI AUTORIZZATI E 1 DISTRIBUTORE AUTOMATICO ###
-//		GestioneTest.generaRivenditori();
+//		## GENERA 2 RIVENDITORI AUTORIZZATI E 1 DISTRIBUTORE AUTOMATICO ##
+		GestioneTest.generaRivenditori();
 		
-//		### GENERA 8 BIGLIETTI DAI 3 RIVENDITORI ###
-//		GestioneTest.emettiBiglietti();
+//		## GENERA 8 BIGLIETTI DAI 3 RIVENDITORI ##
+		GestioneTest.emettiBiglietti();
 		
-//		### CHIEDE NOME E COGNOME PER GENERARE 3 TESSERE ###
-//		GestioneTest.emettiTessere();
+//		## CHIEDE NOME E COGNOME PER GENERARE 3 TESSERE ##
+		GestioneTest.emettiTessere();
 		
-//		### CARICA 1 ABBONAMENTO MENSILE E 2 SETTIMANALI NELLE TESSERE ###
-//		GestioneTest.caricaAbbonamenti();
+//		## CARICA 1 ABBONAMENTO MENSILE E 2 SETTIMANALI NELLE TESSERE ##
+		GestioneTest.caricaAbbonamenti();
 		
-//		### GESTIONE TITOLI E UTENTI ###
+//		### METODI TITOLI E UTENTI ###
 //		TitoloDAO.checkAbbonamento(long NUMEROTESSERA)
 //		TitoloDAO.rinnovaAbbonamento(long NUMEROTESSERA)
 //		TitoloDAO.checkTessera(long NUMEROTESSERA)
 //		TesseraDAO.rinnovaTessera(long NUMEROTESSERA);
-		
 //		TitoloDAO.findTitoliByRivenditore(1);
 //		TitoloDAO.findTitoliByDate(LocalDate.of(2022, 7, 17), LocalDate.of(2022, 7, 19));
 //		TitoloDAO.printAllTitoli();
 		
-//		### GESTIONE PARCO MEZZI ###
-//		GestioneTest.caricaMezzi();
-//		GestioneTest.caricaTratte();
-//		GestioneTest.assegnaTratte();
-//		GestioneTest.dichiaraTempiEffettivi();
-		
+//		##### GESTIONE PARCO MEZZI #####
+		GestioneTest.caricaMezzi();
+
+//		### METODI PARCO MEZZI ###
 //		MezzoDAO.entrainManutenzione(2);
 //		MezzoDAO.entrainServizio(2);
-		
 //		MezzoDAO.vidimaBiglietto(4, 2);
 //		MezzoDAO.findBigliettiByMezzo(2);
 //		MezzoDAO.findBigliettiByValidationDate(LocalDate.of(2023, 7, 18), LocalDate.of(2023, 7, 19));
 //		MezzoDAO.checkStatoMezzo(1);
 //		MezzoDAO.findManutenzioni(2);
 	
+//		##### GESTIONE TRATTE #####
+		GestioneTest.caricaTratte();
+		GestioneTest.assegnaTratte();
+		GestioneTest.dichiaraTempiEffettivi();
 
+//		### METODI TRATTE ###
 //		TrattaDAO.checkTratteAssegnate(2);
-
 //		TrattaDAO.findRipetizioniTratta(1, 3);
-		TrattaDAO.findTempiEffettivi(1, 3);
+//		TrattaDAO.findTempiEffettivi(1, 3);
+		
 	}
 	
 }

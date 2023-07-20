@@ -1,6 +1,5 @@
 package com.trasp.model.mezzi;
 
-
 import javax.persistence.Entity;
 
 @Entity

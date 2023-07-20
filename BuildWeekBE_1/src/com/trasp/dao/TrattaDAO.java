@@ -1,7 +1,6 @@
 package com.trasp.dao;
 
 import java.util.List;
-import java.util.Scanner;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -10,17 +9,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.trasp.enums.StatodeiMezzi;
-import com.trasp.model.mezzi.Autobus;
 import com.trasp.model.mezzi.Mezzo;
 import com.trasp.model.mezzi.Tratta;
 import com.trasp.model.mezzi.TrattaAssegnata;
-import com.trasp.model.titoli.Biglietto;
-import com.trasp.model.titoli.TitolodiViaggio;
 import com.trasp.util.JpaUtil;
 
 public class TrattaDAO {
 
-	private static Scanner scan = new Scanner(System.in);
 	private static final Logger log = LoggerFactory.getLogger(TrattaDAO.class);
 
 	public static Tratta saveTratta(Tratta t) {
@@ -54,7 +49,7 @@ public class TrattaDAO {
 				TrattaAssegnata ta = new TrattaAssegnata();
 				em.persist(ta);
 				ta.setTratta(t);
-				m.getTratta().add(ta);
+				m.getTratteAssegnate().add(ta);
 				em.merge(m);
 				log.info("Tratta assegnata!!!");
 			} else {
@@ -107,7 +102,7 @@ public class TrattaDAO {
 			em.getTransaction().begin();
 			Mezzo m = em.find(Mezzo.class, id);
 			em.getTransaction().commit();
-			List<TrattaAssegnata> risultato = m.getTratta();
+			List<TrattaAssegnata> risultato = m.getTratteAssegnate();
 			boolean first = true;
 			for (TrattaAssegnata t : risultato) {
 				if (first) {
@@ -146,7 +141,7 @@ public class TrattaDAO {
 			int n = 0;
 
 			for (TrattaAssegnata t : risultato) {
-				for (TrattaAssegnata tA : m.getTratta()) {
+				for (TrattaAssegnata tA : m.getTratteAssegnate()) {
 					if (t.getId() == tA.getId()) {
 						n++;
 					}
@@ -185,15 +180,15 @@ public class TrattaDAO {
 			Mezzo m = em.find(Mezzo.class, idM);
 			Tratta tratta = em.find(Tratta.class, idT);
 			em.getTransaction().commit();
+			log.info("Tempi effettivi di percorrenza della tratta " + tratta.getNome());
 			for (TrattaAssegnata t : risultato) {
-				for (TrattaAssegnata tA : m.getTratta()) {
+				for (TrattaAssegnata tA : m.getTratteAssegnate()) {
 					if (t.getId() == tA.getId()) {
 						log.info("tempo: " + tA.getTempoEffettivo());
 					}
 				}
 			}
-			log.info("Tempi effettivi di percorrenza della tratta " + tratta.getNome());
-			log.info("Il tempo medio era " + m.getTratta().get(1).getTratta().getTempoMedio());
+			log.info("Il tempo medio era " + m.getTratteAssegnate().get(1).getTratta().getTempoMedio());
 			if (risultato.size() == 0) {
 				log.info("Nessun risultato trovato!!!");
 			}

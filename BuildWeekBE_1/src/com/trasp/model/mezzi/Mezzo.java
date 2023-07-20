@@ -19,7 +19,7 @@ import javax.persistence.Table;
 import com.trasp.enums.StatodeiMezzi;
 
 @Entity
-@Table(name = "mezzo")
+@Table(name = "mezzi")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "TipoRivenditore", discriminatorType = DiscriminatorType.STRING)
 public class Mezzo {
@@ -32,7 +32,7 @@ public class Mezzo {
 	@ManyToMany
 	private List<Manutenzione> periodoDiManutenzione;
 	@ManyToMany
-	private List<TrattaAssegnata> tratta;
+	private List<TrattaAssegnata> tratteAssegnate;
 	@Enumerated(EnumType.STRING)
 	private StatodeiMezzi statomezzo;
 
@@ -57,12 +57,12 @@ public class Mezzo {
 		this.periodoDiManutenzione = periodoDiManutenzione;
 	}
 
-	public List<TrattaAssegnata> getTratta() {
-		return tratta;
+	public List<TrattaAssegnata> getTratteAssegnate() {
+		return tratteAssegnate;
 	}
 
-	public void setTratta(List<TrattaAssegnata> tratta) {
-		this.tratta = tratta;
+	public void setTratteAssegnate(List<TrattaAssegnata> tratteAssegnate) {
+		this.tratteAssegnate = tratteAssegnate;
 	}
 
 	public Long getId() {
@@ -80,7 +80,7 @@ public class Mezzo {
 	@Override
 	public String toString() {
 		return "Mezzo [id=" + id + ", capienza=" + capienza + ", periodoDiManutenzione=" + periodoDiManutenzione
-				+ ", tratta=" + tratta + ", statomezzo=" + statomezzo + "]";
+				+ ", tratte assegnate=" + tratteAssegnate + ", statomezzo=" + statomezzo + "]";
 	}
 
 }

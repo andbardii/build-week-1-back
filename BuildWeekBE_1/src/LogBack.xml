@@ -17,7 +17,7 @@
     <appender-ref ref="ConsoleLog" />
     <appender-ref ref="fileLog" />
   </logger>
-  <root level="debug">
+  <root level="info">
     <appender-ref ref="ConsoleLog" />
     <appender-ref ref="fileLog" />
   </root>

@@ -1,10 +1,8 @@
 package com.trasp.dao;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Scanner;
 import java.util.Set;
 
 import javax.persistence.EntityManager;
@@ -14,18 +12,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.trasp.enums.StatodeiMezzi;
-import com.trasp.model.mezzi.Autobus;
 import com.trasp.model.mezzi.Manutenzione;
 import com.trasp.model.mezzi.Mezzo;
-import com.trasp.model.mezzi.Tratta;
 import com.trasp.model.titoli.Biglietto;
-import com.trasp.model.titoli.Tessera;
 import com.trasp.model.titoli.TitolodiViaggio;
 import com.trasp.util.JpaUtil;
 
 public class MezzoDAO {
 	
-	private static Scanner scan = new Scanner(System.in);
 	private static final Logger log = LoggerFactory.getLogger(MezzoDAO.class);
 	
 	public static Mezzo saveMezzo(Mezzo m) {
