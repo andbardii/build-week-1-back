@@ -13,6 +13,10 @@
        <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
     </encoder>
   </appender>
+  <logger name="org.hibernate" level="error">
+    <appender-ref ref="ConsoleLog" />
+    <appender-ref ref="fileLog" />
+  </logger>
   <root level="debug">
     <appender-ref ref="ConsoleLog" />
     <appender-ref ref="fileLog" />

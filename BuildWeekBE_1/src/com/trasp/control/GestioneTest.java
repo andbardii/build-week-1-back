@@ -126,4 +126,21 @@ public class GestioneTest {
 		TrattaDAO.saveTratta(t4);
 		
 	}
+
+	public static void assegnaTratte() {
+		TrattaDAO.assegnaTratta(1, 3);
+		TrattaDAO.assegnaTratta(1, 3);
+		TrattaDAO.assegnaTratta(1, 3);
+		TrattaDAO.assegnaTratta(7, 1);
+		TrattaDAO.assegnaTratta(3, 2);
+		TrattaDAO.assegnaTratta(7, 1);
+		TrattaDAO.assegnaTratta(2, 3);
+	}
+
+	public static void dichiaraTempiEffettivi() {
+		TrattaDAO.dichiaraTempoEffettivo(2, 0.45);
+		TrattaDAO.dichiaraTempoEffettivo(1, 0.30);
+		TrattaDAO.dichiaraTempoEffettivo(3, 0.40);
+		TrattaDAO.dichiaraTempoEffettivo(6, 1.05);
+	}
 }

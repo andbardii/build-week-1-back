@@ -40,6 +40,8 @@ public class GestioneTrasportoPubblico {
 //		### GESTIONE PARCO MEZZI ###
 //		GestioneTest.caricaMezzi();
 //		GestioneTest.caricaTratte();
+//		GestioneTest.assegnaTratte();
+//		GestioneTest.dichiaraTempiEffettivi();
 		
 //		MezzoDAO.entrainManutenzione(2);
 //		MezzoDAO.entrainServizio(2);
@@ -50,12 +52,11 @@ public class GestioneTrasportoPubblico {
 //		MezzoDAO.checkStatoMezzo(1);
 //		MezzoDAO.findManutenzioni(2);
 	
-//		TrattaDAO.assegnaTratta(1, 3);
-//		TrattaDAO.assegnaTratta(7, 1);
+
 //		TrattaDAO.checkTratteAssegnate(2);
-//		TrattaDAO.dichiaraTempoEffettivo(2, 0.45);
+
 //		TrattaDAO.findRipetizioniTratta(1, 3);
-		
+		TrattaDAO.findTempiEffettivi(1, 3);
 	}
 	
 }
