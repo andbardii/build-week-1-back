@@ -13,6 +13,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.trasp.enums.Durata;
+import com.trasp.enums.StatodiServizio;
+import com.trasp.model.rivenditori.DistributoreAutomatico;
 import com.trasp.model.rivenditori.Rivenditore;
 import com.trasp.model.rivenditori.RivenditoreAutorizzato;
 import com.trasp.model.titoli.Abbonamento;
@@ -58,11 +60,16 @@ public class TitoloDAO {
 		} else {
 			try {
 				em.getTransaction().begin();
-				Biglietto b = new Biglietto();
-				b.setLuogodiAcquisto(r);
-				em.persist(b);
-				em.getTransaction().commit();
-				log.info("Biglietto acquistato!!!");
+				DistributoreAutomatico da = (DistributoreAutomatico) r;
+				if(da.getStatus().equals(StatodiServizio.ATTIVO)) {
+					Biglietto b = new Biglietto();
+					b.setLuogodiAcquisto(r);
+					em.persist(b);
+					em.getTransaction().commit();
+					log.info("Biglietto acquistato!!!");
+				}else {
+					log.info("Distributore Automatico Chiuso!!!");
+				}
 			} catch (Exception ex) {
 				em.getTransaction().rollback();
 
