@@ -3,6 +3,7 @@ package com.trasp.control;
 import java.time.LocalDate;
 
 import com.trasp.dao.MezzoDAO;
+import com.trasp.dao.TesseraDAO;
 import com.trasp.dao.TitoloDAO;
 import com.trasp.dao.TrattaDAO;
 
@@ -18,28 +19,28 @@ public class GestioneTrasportoPubblico {
 //		##### GESTIONE TITOLI E UTENTI #####
 
 //		## GENERA 2 RIVENDITORI AUTORIZZATI E 1 DISTRIBUTORE AUTOMATICO ##
-		GestioneTest.generaRivenditori();
+//		GestioneTest.generaRivenditori();
 		
 //		## GENERA 8 BIGLIETTI DAI 3 RIVENDITORI ##
-		GestioneTest.emettiBiglietti();
+//		GestioneTest.emettiBiglietti();
 		
 //		## CHIEDE NOME E COGNOME PER GENERARE 3 TESSERE ##
-		GestioneTest.emettiTessere();
+//		GestioneTest.emettiTessere();
 		
 //		## CARICA 1 ABBONAMENTO MENSILE E 2 SETTIMANALI NELLE TESSERE ##
-		GestioneTest.caricaAbbonamenti();
+//		GestioneTest.caricaAbbonamenti();
 		
 //		### METODI TITOLI E UTENTI ###
-//		TitoloDAO.checkAbbonamento(long NUMEROTESSERA)
-//		TitoloDAO.rinnovaAbbonamento(long NUMEROTESSERA)
-//		TitoloDAO.checkTessera(long NUMEROTESSERA)
-//		TesseraDAO.rinnovaTessera(long NUMEROTESSERA);
+//		TitoloDAO.checkAbbonamento(1);
+//		TitoloDAO.rinnovaAbbonamento(1);
+//		TesseraDAO.checkTessera(1);
+//		TesseraDAO.rinnovaTessera(1);
 //		TitoloDAO.findTitoliByRivenditore(1);
-//		TitoloDAO.findTitoliByDate(LocalDate.of(2022, 7, 17), LocalDate.of(2022, 7, 19));
+//		TitoloDAO.findTitoliByDate(LocalDate.of(2023, 7, 20), LocalDate.of(2023, 7, 22));
 //		TitoloDAO.printAllTitoli();
 		
 //		##### GESTIONE PARCO MEZZI #####
-		GestioneTest.caricaMezzi();
+//		GestioneTest.caricaMezzi();
 
 //		### METODI PARCO MEZZI ###
 //		MezzoDAO.entrainManutenzione(2);
@@ -51,9 +52,9 @@ public class GestioneTrasportoPubblico {
 //		MezzoDAO.findManutenzioni(2);
 	
 //		##### GESTIONE TRATTE #####
-		GestioneTest.caricaTratte();
-		GestioneTest.assegnaTratte();
-		GestioneTest.dichiaraTempiEffettivi();
+//		GestioneTest.caricaTratte();
+//		GestioneTest.assegnaTratte();
+//		GestioneTest.dichiaraTempiEffettivi();
 
 //		### METODI TRATTE ###
 //		TrattaDAO.checkTratteAssegnate(2);

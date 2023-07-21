@@ -27,6 +27,9 @@ export class DirigenteComponent implements OnInit {
   constructor(private dSvc:DirigenteService, private cSvc:ClienteService) {}
 
   ngOnInit(): void {
+    this.getAllRivenditori();
+    this.getAllTessere();
+    this.getAllBiglietti();
     this.countRivenditori();
     this.countBiglietti();
     this.countTessere();
@@ -51,6 +54,15 @@ export class DirigenteComponent implements OnInit {
       return data;
     })
   }
+
+  getAllBiglietti(): void {
+    this.cSvc.getAllBiglietti().subscribe(data => {
+      this.allBiglietti = data;
+      console.log("TOTALE UTENTI ISCRITTI: " + JSON.stringify(this.allBiglietti));
+      return data;
+    })
+  }
+
   countRivenditori(): void {
     for (let i = 0; i < this.allRivenditori.length; i++) {
       this.nR++;

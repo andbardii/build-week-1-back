@@ -169,6 +169,8 @@ public class TitoloDAO {
 						break;
 					}
 				}
+			}else {
+				log.info("Abbonamento ancora valido!!!");
 			}
 			em.getTransaction().commit();
 		} catch (Exception ex) {

@@ -21,7 +21,7 @@ import com.trasp.enums.StatodeiMezzi;
 @Entity
 @Table(name = "mezzi")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "TipoRivenditore", discriminatorType = DiscriminatorType.STRING)
+@DiscriminatorColumn(name = "tipo_mezzo", discriminatorType = DiscriminatorType.STRING)
 public class Mezzo {
 
 	@Id
