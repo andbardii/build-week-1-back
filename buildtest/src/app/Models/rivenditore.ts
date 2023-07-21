@@ -1,4 +1,4 @@
 export interface Rivenditore {
-  id: number;
+  id?: number;
   nome: string;
 }

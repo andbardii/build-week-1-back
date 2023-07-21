@@ -18,4 +18,9 @@ export class DirigenteService {
   getAll() {
     return this.http.get(this.rivenditoreApi);
   }
+
+  getRivenditoreById(id: number|undefined) {
+    return this.http.get(this.rivenditoreApi + "/" + id);
+  }
+
 }

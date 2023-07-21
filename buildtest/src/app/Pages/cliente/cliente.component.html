@@ -1,1 +1,36 @@
-<p>cliente works!</p>
+<div class="row">
+  <div class="col-12 p-3">
+    <div class="bg-light p-3 rounded-2 shadow">
+      <form>
+        <h3 class="my-3 fw-normal text-center">GENERA UTENTE</h3>
+
+          <input type="text" class="form-control my-2" name="nome" placeholder="Nome" required [(ngModel)]="u.nome">
+          <input type="text" class="form-control my-2" name="cognome" placeholder="Cognome" required [(ngModel)]="u.cognome">
+
+        <button class="w-100 btn btn-dark my-4 text-light" (click)="iscriviUtente()">GENERA</button>
+
+      </form>
+    </div>
+  </div>
+  <div class="col-12 p-3">
+    <div class="bg-light p-3 rounded-2 shadow">
+      <form>
+        <h3 class="my-3 fw-normal text-center">ACQUISTA BIGLIETTO</h3>
+
+        <input type="number" class="form-control my-2" name="rivenditore" placeholder="ID Rivenditore" required [(ngModel)]="r.id">
+
+        <button class="w-100 btn btn-dark my-4 text-light" (click)="sellBiglietto()">ACQUISTA</button>
+      </form>
+      <form>
+        <h3 class="my-3 fw-normal text-center">ACQUISTA ABBONAMENTO</h3>
+
+        <input type="number" class="form-control my-2" name="rivenditore" placeholder="ID Rivenditore" required [(ngModel)]="r.id">
+        <select class="form-control" id="caratteristica" name="caratteristica" [(ngModel)]="durataScelta">
+          <option *ngFor="let durata of opzioniDurata" [value]="durata">{{durata}}</option>
+        </select>
+
+        <button class="w-100 btn btn-dark my-4 text-light" (click)="sellAbbonamento()">ACQUISTA</button>
+      </form>
+    </div>
+  </div>
+</div>
