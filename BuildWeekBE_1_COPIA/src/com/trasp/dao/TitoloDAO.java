@@ -277,13 +277,18 @@ public class TitoloDAO {
 		
 		try {
 			
-        Query query1 = em.createNamedQuery("printAllBiglietti", TitolodiViaggio.class);
-        List<TitolodiViaggio> risultato = query1.getResultList();
+        Query query1 = em.createNamedQuery("findBigliettiByDate", TitolodiViaggio.class);
+        List<TitolodiViaggio> risultato1 = query1.getResultList();
+
+        Query query2 = em.createNamedQuery("findAbbonamentiByDate", TitolodiViaggio.class);
+        List<TitolodiViaggio> risultato2 = query2.getResultList();
+
+        List<TitolodiViaggio> risultatoFinale = new ArrayList<>();
+        risultatoFinale.addAll(risultato1);
+        risultatoFinale.addAll(risultato2);
         
-        risultato.addAll(risultato);
-        
-        risultato.forEach(t -> log.info(t.toString()));
-        if(risultato.size()==0) {
+        risultatoFinale.forEach(t -> log.info(t.toString()));
+        if(risultatoFinale.size()==0) {
         	log.info("Nessun titolo creato!!!");
         }
         
