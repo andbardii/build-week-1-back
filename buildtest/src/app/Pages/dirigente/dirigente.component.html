@@ -15,7 +15,16 @@
           <input type="text" class="form-control my-2" name="nome" placeholder="Nome" required [(ngModel)]="r.nome">
 
         <button class="w-100 btn btn-dark my-4 text-light" (click)="genera()">GENERA</button>
+
       </form>
+      <button class="w-100 btn btn-dark my-4 text-light" (click)="getAll()">MOSTRA RIVENDITORI</button>
+    </div>
+  </div>
+  <div class="col-12 p-3">
+    <div class="bg-light p-3 rounded-2 shadow">
+      <ul *ngFor="let rivenditori of allRivenditori">
+        <li>{{rivenditori.nome}}</li>
+      </ul>
     </div>
   </div>
 </div>

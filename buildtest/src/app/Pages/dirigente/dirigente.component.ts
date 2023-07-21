@@ -11,6 +11,9 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./dirigente.component.scss']
 })
 export class DirigenteComponent {
+
+  allRivenditori:any;
+
   r: Rivenditore = {
     id: 0,
     nome: ''
@@ -25,7 +28,8 @@ export class DirigenteComponent {
 
   getAll(): void {
     this.dSvc.getAll().subscribe(data => {
-      console.log("TOTALE RIVENDITORI" + data);
+      this.allRivenditori = data;
+      console.log("TOTALE RIVENDITORI: " + JSON.stringify(this.allRivenditori));
       return data;
     })
   }

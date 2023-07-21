@@ -1,9 +1,9 @@
 export const environment = {
-  rivenditoreApi: 'https://localhost:8080/rivenditori',
-  bigliettoApi: 'https://localhost:8080/biglietti',
-  abbonamentoApi: 'https://localhost:8080/abbonamenti',
-  tesseraApi: 'https://localhost:8080/tessere',
-  utenteApi: 'https://localhost:8080/utenti',
-  autobusApi: 'https://localhost:8080/autobus',
-  tramApi: 'https://localhost:8080/tram'
+  rivenditoreApi: 'http://localhost:8080/rivenditori',
+  bigliettoApi: 'http://localhost:8080/biglietti',
+  abbonamentoApi: 'http://localhost:8080/abbonamenti',
+  tesseraApi: 'http://localhost:8080/tessere',
+  utenteApi: 'http://localhost:8080/utenti',
+  autobusApi: 'http://localhost:8080/autobus',
+  tramApi: 'http://localhost:8080/tram'
 };
