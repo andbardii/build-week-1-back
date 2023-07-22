@@ -2,6 +2,7 @@ package com.trasp.control;
 
 import com.trasp.dao.TitoloDAO;
 import com.trasp.dao.TrattaDAO;
+
 import com.trasp.dao.MezzoDAO;
 import com.trasp.dao.RivenditoreDAO;
 import com.trasp.dao.TesseraDAO;
@@ -143,4 +144,5 @@ public class GestioneTest {
 		TrattaDAO.dichiaraTempoEffettivo(3, 0.40);
 		TrattaDAO.dichiaraTempoEffettivo(6, 1.05);
 	}
+
 }

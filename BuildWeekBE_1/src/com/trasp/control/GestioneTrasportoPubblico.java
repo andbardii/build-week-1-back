@@ -9,11 +9,8 @@ import com.trasp.dao.TrattaDAO;
 
 public class GestioneTrasportoPubblico {
 
-//		### READ ME ###
 //		( GestioneTest ) PERMETTE DI GENERARE DIVERSI DATI PER TESTARE IL PROGRAMMA
-//		( ClassiDAO ) ESISTE UNA CLASSE DAO DEFINITA PER QUASI OGNI CLASSE: 
-//		[ UTENTE, TITOLO, TESSERA, RIVENDITORE, MEZZO ]
-	
+
 	public static void main(String[] args) {
 		
 //		##### GESTIONE TITOLI E UTENTI #####

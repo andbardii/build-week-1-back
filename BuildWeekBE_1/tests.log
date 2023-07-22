@@ -77,3 +77,46 @@
 15:59:36.360 [main] INFO  com.trasp.dao.TitoloDAO - BigliettoTitolodiViaggio [id=8, datadiEmissione=2023-07-21, luogodiAcquisto=DistributoreAutomaticoRivenditore [id=3, nome=H24 Merendine]status=ATTIVO]]datadiValidazione=null, luogodiValidazione=null, valid=true]
 15:59:47.901 [main] INFO  com.trasp.dao.MezzoDAO - Mezzo entrato in manutenzione!!!
 16:00:03.053 [main] INFO  com.trasp.dao.MezzoDAO - Mezzo entrato in servizio!!!
+17:48:52.107 [main] INFO  com.trasp.dao.RivenditoreDAO - Rivenditore aggiunto!!!RivenditoreAutorizzatoRivenditore [id=1, nome=Da Mario]tipoRivenditore=EDICOLA, orariodiApertura=09:00, orariodiChiusura=21:00]
+17:48:52.110 [main] INFO  com.trasp.dao.RivenditoreDAO - Rivenditore aggiunto!!!RivenditoreAutorizzatoRivenditore [id=2, nome=Da Maria]tipoRivenditore=TABACCHI, orariodiApertura=09:00, orariodiChiusura=21:00]
+17:48:52.111 [main] INFO  com.trasp.dao.RivenditoreDAO - Rivenditore aggiunto!!!DistributoreAutomaticoRivenditore [id=3, nome=H24 Merendine]status=ATTIVO]
+17:48:52.127 [main] INFO  com.trasp.dao.RivenditoreDAO - Rivenditore: RivenditoreAutorizzatoRivenditore [id=1, nome=Da Mario]tipoRivenditore=EDICOLA, orariodiApertura=09:00, orariodiChiusura=21:00]
+17:48:52.139 [main] INFO  com.trasp.dao.TitoloDAO - Biglietto acquistato!!!
+17:48:52.142 [main] INFO  com.trasp.dao.RivenditoreDAO - Rivenditore: RivenditoreAutorizzatoRivenditore [id=1, nome=Da Mario]tipoRivenditore=EDICOLA, orariodiApertura=09:00, orariodiChiusura=21:00]
+17:48:52.144 [main] INFO  com.trasp.dao.TitoloDAO - Biglietto acquistato!!!
+17:48:52.145 [main] INFO  com.trasp.dao.RivenditoreDAO - Rivenditore: RivenditoreAutorizzatoRivenditore [id=2, nome=Da Maria]tipoRivenditore=TABACCHI, orariodiApertura=09:00, orariodiChiusura=21:00]
+17:48:52.148 [main] INFO  com.trasp.dao.TitoloDAO - Biglietto acquistato!!!
+17:48:52.151 [main] INFO  com.trasp.dao.RivenditoreDAO - Rivenditore: RivenditoreAutorizzatoRivenditore [id=2, nome=Da Maria]tipoRivenditore=TABACCHI, orariodiApertura=09:00, orariodiChiusura=21:00]
+17:48:52.153 [main] INFO  com.trasp.dao.TitoloDAO - Biglietto acquistato!!!
+17:48:52.155 [main] INFO  com.trasp.dao.RivenditoreDAO - Rivenditore: DistributoreAutomaticoRivenditore [id=3, nome=H24 Merendine]status=ATTIVO]
+17:48:52.157 [main] INFO  com.trasp.dao.TitoloDAO - Biglietto acquistato!!!
+17:48:52.158 [main] INFO  com.trasp.dao.RivenditoreDAO - Rivenditore: DistributoreAutomaticoRivenditore [id=3, nome=H24 Merendine]status=ATTIVO]
+17:48:52.160 [main] INFO  com.trasp.dao.TitoloDAO - Biglietto acquistato!!!
+17:48:52.162 [main] INFO  com.trasp.dao.RivenditoreDAO - Rivenditore: RivenditoreAutorizzatoRivenditore [id=2, nome=Da Maria]tipoRivenditore=TABACCHI, orariodiApertura=09:00, orariodiChiusura=21:00]
+17:48:52.164 [main] INFO  com.trasp.dao.TitoloDAO - Biglietto acquistato!!!
+17:48:52.165 [main] INFO  com.trasp.dao.RivenditoreDAO - Rivenditore: DistributoreAutomaticoRivenditore [id=3, nome=H24 Merendine]status=ATTIVO]
+17:48:52.167 [main] INFO  com.trasp.dao.TitoloDAO - Biglietto acquistato!!!
+17:49:00.096 [main] INFO  com.trasp.dao.UtenteDAO - Utente aggiunto!!!
+17:49:00.100 [main] INFO  com.trasp.dao.TesseraDAO - Tessera emessa, Numero: 1
+17:49:03.712 [main] INFO  com.trasp.dao.UtenteDAO - Utente aggiunto!!!
+17:49:03.715 [main] INFO  com.trasp.dao.TesseraDAO - Tessera emessa, Numero: 2
+17:49:05.590 [main] INFO  com.trasp.dao.UtenteDAO - Utente aggiunto!!!
+17:49:05.592 [main] INFO  com.trasp.dao.TesseraDAO - Tessera emessa, Numero: 3
+17:49:05.594 [main] INFO  com.trasp.dao.RivenditoreDAO - Rivenditore: RivenditoreAutorizzatoRivenditore [id=1, nome=Da Mario]tipoRivenditore=EDICOLA, orariodiApertura=09:00, orariodiChiusura=21:00]
+17:49:05.608 [main] INFO  com.trasp.dao.TitoloDAO - Abbonamento caricato!!!
+17:49:05.610 [main] INFO  com.trasp.dao.RivenditoreDAO - Rivenditore: RivenditoreAutorizzatoRivenditore [id=2, nome=Da Maria]tipoRivenditore=TABACCHI, orariodiApertura=09:00, orariodiChiusura=21:00]
+17:49:05.616 [main] INFO  com.trasp.dao.TitoloDAO - Abbonamento caricato!!!
+17:49:05.618 [main] INFO  com.trasp.dao.RivenditoreDAO - Rivenditore: RivenditoreAutorizzatoRivenditore [id=2, nome=Da Maria]tipoRivenditore=TABACCHI, orariodiApertura=09:00, orariodiChiusura=21:00]
+17:49:05.624 [main] INFO  com.trasp.dao.TitoloDAO - Abbonamento caricato!!!
+17:49:05.678 [main] INFO  com.trasp.dao.TrattaDAO - Tratta assegnata!!!
+17:49:05.689 [main] INFO  com.trasp.dao.TrattaDAO - Tratta assegnata!!!
+17:49:05.696 [main] INFO  com.trasp.dao.TrattaDAO - Tratta assegnata!!!
+17:49:05.701 [main] INFO  com.trasp.dao.TrattaDAO - Tratta assegnata!!!
+17:49:05.709 [main] INFO  com.trasp.dao.TrattaDAO - Tratta assegnata!!!
+17:49:05.715 [main] INFO  com.trasp.dao.TrattaDAO - Tratta assegnata!!!
+17:49:05.721 [main] INFO  com.trasp.dao.TrattaDAO - Tratta assegnata!!!
+17:49:05.726 [main] INFO  com.trasp.dao.TrattaDAO - Hai rispettato i tempi!!!
+17:49:05.729 [main] INFO  com.trasp.dao.TrattaDAO - Hai rispettato i tempi!!!
+17:49:05.732 [main] INFO  com.trasp.dao.TrattaDAO - Hai rispettato i tempi!!!
+17:49:05.735 [main] INFO  com.trasp.dao.TrattaDAO - Il tuo tempo è superiore al tempo medio!!!
+17:50:51.223 [main] INFO  com.trasp.dao.TitoloDAO - Abbonamento ancora valido!!!
